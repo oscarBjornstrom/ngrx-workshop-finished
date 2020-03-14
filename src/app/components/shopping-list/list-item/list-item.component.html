@@ -1,12 +1,13 @@
-<li>
+<li data-cy="listItem">
   <div>
     <span
+      data-cy="toggleAcquired"
       (click)="updateItem.emit()"
       [ngClass]="{'item-checked': shoppingListItem.acquired}">
       {{shoppingListItem.name}} - {{shoppingListItem.quantity}}
     </span>
 
-    <button (click)="removeItem.emit()" mat-icon-button>
+    <button data-cy="removeItem" (click)="removeItem.emit()" mat-icon-button>
       <mat-icon>clear</mat-icon>
     </button>
   </div>

@@ -2,17 +2,17 @@
   <h1>Counter</h1>
 
   <div>
-    <p>{{(counter$ | async).counter}}</p>
+    <p data-cy="counter">{{(counter$ | async).counter}}</p>
   </div>
   <mat-card-actions>
-    <button mat-stroked-button (click)="addOne()">+1</button>
-    <button mat-stroked-button (click)="removeOne()">-1</button>
-    <button mat-stroked-button (click)="reset()">reset</button>
+    <button data-cy="add" mat-stroked-button (click)="addOne()">+1</button>
+    <button data-cy="remove" mat-stroked-button (click)="removeOne()">-1</button>
+    <button data-cy="reset" mat-stroked-button (click)="reset()">reset</button>
     <div>
       <mat-form-field>
-        <input type="number" matInput [(ngModel)]="numInput">
+        <input data-cy="setInput" type="number" matInput [(ngModel)]="numInput">
       </mat-form-field>
-      <button mat-raised-button (click)="setValue()">setValue</button>
+      <button data-cy="setVal" mat-raised-button (click)="setValue()">setValue</button>
     </div>
   </mat-card-actions>
 </mat-card>

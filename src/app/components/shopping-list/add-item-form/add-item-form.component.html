@@ -2,14 +2,14 @@
   <form (ngSubmit)="addItemToList()" [formGroup]="addItemForm" class="d-flex flex-column">
     <mat-form-field>
       <mat-label>Name</mat-label>
-      <input type="text" matInput formControlName="name">
+      <input data-cy="itemNameInput" type="text" matInput formControlName="name">
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Quantity</mat-label>
-      <input type="text" matInput formControlName="quantity">
+      <input data-cy="itemQuantityInput" type="text" matInput formControlName="quantity">
     </mat-form-field>
-    <button type="submit" mat-raised-button>Add to shopping list</button>
+    <button data-cy="submitButton" type="submit" mat-raised-button>Add to shopping list</button>
   </form>
 
 </mat-card>
